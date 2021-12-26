@@ -1,0 +1,12 @@
+name: todos_repository
+descriptiion: A dart repository that manages todos domain.
+publish_to: none
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+
+dependencies:
+  hive: ^2.0.5
+  
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
