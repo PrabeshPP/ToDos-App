@@ -6,8 +6,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {}, child: const Icon(Icons.note_add_rounded)),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(right:8.0,bottom:24),
+        child: FloatingActionButton(
+            onPressed: () {}, child: const Icon(Icons.note_add_rounded)),
+      ),
       appBar: AppBar(
         title: const Text("ToDo"),
       ),
@@ -21,17 +24,23 @@ class HomePage extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         child: ListView.builder(
-          itemCount: 5,itemBuilder: (context, index) {
-          return const Card(
-            color: Colors.white,
-            child:  ListTile(
-              title: Text("Title of the work"),
-              subtitle: Text("I have to complete the work by tomorrow ,My name is prabesh bista,I am tikapur kailali."),
-                   
-              
-            ),
-          );
-        }),
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(
+                  left: 8,
+                  right: 8,
+                ),
+                child: Card(
+                  color: Colors.blueGrey.shade800,
+                  child: const ListTile(
+                    title: Text("Title of the work"),
+                    subtitle: Text(
+                        "I have to complete the work by tomorrow ,My name is prabesh bista,I am tikapur kailali."),
+                  ),
+                ),
+              );
+            }),
       )),
     );
   }
