@@ -3,9 +3,9 @@
 import 'package:hive/hive.dart';
 
 class TodosRepository {
-  Future<void> loaddata() async {
+  Future<void> getdata() async {
     var box = await Hive.openBox("MyTask");
-    await box.put("hello", "world");
+    await box.get("MyTask");
     await box.close();
   }
 }
