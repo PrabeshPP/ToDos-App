@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         child: ListView.builder(
-            itemCount: 5,
+            itemCount: 15,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.only(
@@ -32,11 +32,17 @@ class HomePage extends StatelessWidget {
                   right: 8,
                 ),
                 child: Card(
-                  color: Colors.blueGrey.shade800,
+                  color: Colors.blueGrey.shade900,
                   child: const ListTile(
-                    title: Text("Title of the work"),
+                    title: Text("Title of the work",
+                    style: TextStyle(
+                      color: Colors.white
+                    ),),
                     subtitle: Text(
-                        "I have to complete the work by tomorrow ,My name is prabesh bista,I am tikapur kailali."),
+                        "I have to complete the work by tomorrow ,My name is prabesh bista,I am tikapur kailali.",
+                        style:TextStyle(
+                          color: Colors.white 
+                        ),),
                   ),
                 ),
               );
