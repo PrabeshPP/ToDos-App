@@ -5,6 +5,8 @@ import 'package:hive/hive.dart';
 import 'enitity/entity.dart';
 
 class TodosRepository {
+ 
+  
   Future<void> getData() async {
     Hive.registerAdapter(TodoEntityAdapter());
     var box = await Hive.openBox<TodoEntity>("MyTask");
@@ -12,12 +14,18 @@ class TodosRepository {
     await box.close();
   }
 
-  Future<void> writeData() async {
+  Future<void> addData() async {
+    Hive.registerAdapter(TodoEntityAdapter());
     var box = await Hive.openBox("MyTask");
     await box.put("hello", "world");
     await box.close();
   }
 
-  Future<void> updateData() async {}
-  Future<void> deleteData() async {}
+  Future<void> updateData() async {
+    Hive.registerAdapter(TodoEntityAdapter());
+  }
+
+  Future<void> deleteData() async {
+    Hive.registerAdapter(TodoEntityAdapter());
+  }
 }
