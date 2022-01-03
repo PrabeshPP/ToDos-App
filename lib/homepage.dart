@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(right:8.0,bottom:24),
         child: FloatingActionButton(
-            onPressed: () {}, child: const Icon(Icons.note_add_rounded)),
+            onPressed: () {}, child: const Icon(Icons.add)),
       ),
       appBar: AppBar(
         title: const Text("ToDo"),
