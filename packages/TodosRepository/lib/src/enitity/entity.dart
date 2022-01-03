@@ -1,11 +1,17 @@
 import 'package:equatable/equatable.dart';
-
+import 'package:hive/hive.dart';
+part 'entity.g.dart';
+@HiveType(typeId: 0)
 class TodoEntity extends Equatable {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final bool complete;
+  @HiveField(2)
   final String note;
+  @HiveField(3)
   final String task;
-
+  
   const TodoEntity(
       {required this.id,
       required this.complete,
