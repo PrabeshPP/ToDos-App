@@ -8,6 +8,7 @@ void main() async {
   final appDocumentDirectory =
       await path_provider.getApplicationDocumentsDirectory();
   Hive.init(appDocumentDirectory.path);
+  final todosBox = Hive.openBox("todos");
   runApp(const MyApp());
 }
 

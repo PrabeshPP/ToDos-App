@@ -1,12 +1,20 @@
-import 'package:hive/hive.dart';
+// import 'package:hive/hive.dart';
+// import 'package:todos/src/models/todo.dart';
 
-class ToDosRepository {
-  Future<void> loadData() async {
-    final box = await Hive.openBox("ToDos");
-    
-  }
+// class ToDosRepository {
+//   Future<List<Todos>> loadData() async {
+  
+  
 
-  Future<void> deleteData() async {}
 
-  Future<void> updateData() async {}
-}
+   
+//   }
+
+//   Future<void> deleteData() async {}
+
+//   Future<void> updateData() async {}
+
+//   Future<void> addData() async{
+
+//   }
+// }

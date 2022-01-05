@@ -1,35 +1,21 @@
-import 'package:equatable/equatable.dart';
-import 'package:uuid/uuid.dart';
+import 'package:hive/hive.dart';
 
-class Todo extends Equatable {
+part 'todo.g.dart';
+@HiveType(typeId:0)
+class Todos {
+  @HiveField(0)
   final String id;
-  final bool complete;
-  final String note;
+  @HiveField(1)
+  final String? title;
+  @HiveField(2)
   final String task;
+  @HiveField(3)
+  final bool complete;
 
-  Todo(
-    this.task, {
-    String? id,
-    this.complete = false,
-    String? note,
-  })  : id = id ?? const Uuid().v4(),
-        note = note ?? '';
-
-  Todo copyWith({bool? complete, String? id, String? task, String? note}) {
-    return Todo(task ?? this.task,
-        id: id ?? this.id,
-        complete: complete ?? this.complete,
-        note: note ?? this.note);
-  }
-
-  @override
-  List<Object?> get props => [id, complete, note];
-
-  @override
-  String toString() => 'Todo{complete:$complete,task:$task,note:$note,id:$id}';
-
-  
-
-  
+  Todos({
+    required this.id,
+     this.title,
+     required  this.task,
+     required  this.complete});
 
 }
