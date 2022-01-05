@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("ToDo"),
       ),
-      body: SafeArea(
+      body: SafeArea( 
           child: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
