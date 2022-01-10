@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:todos/src/homepage.dart';
+import 'package:todos/src/presentation/add_todo.dart';
+import 'package:todos/src/presentation/homepage.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:todos/src/models/todo.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePage(),
+      home: AddToDo(),
     );
   }
 }
